@@ -6,6 +6,7 @@ include(fkframeworkpath.pri)
     contains(FK, deploy):include($$FK_UTILS_FOLDER/fkdeploy.pri)
     contains(FK, imageset):include($$FK_UTILS_FOLDER/fkimageset.pri)
     contains(FK, modules):include($$FK_UTILS_FOLDER/fkmodules.pri)
+    contains(FK, helpers):include($$FK_UTILS_FOLDER/fkhelpers.pri)
 }else{
     error("FKFramework path is not set")
 }
