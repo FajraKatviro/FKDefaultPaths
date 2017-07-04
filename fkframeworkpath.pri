@@ -18,8 +18,8 @@ isEmpty(FK_FRAMEWORK_PATH){
 }
 
 !isEmpty(FK_FRAMEWORK_PATH){
-    FK_TOOLS_FOLDER = $$FK_FRAMEWORK_PATH/tools
-    FK_UTILS_FOLDER = $$FK_FRAMEWORK_PATH/utils
+    FK_TOOLS_FOLDER = $$system_path($$FK_FRAMEWORK_PATH/tools)
+    FK_UTILS_FOLDER = $$system_path($$FK_FRAMEWORK_PATH/utils)
 }
 
 export(FK_FRAMEWORK_PATH)
