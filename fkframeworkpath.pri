@@ -18,12 +18,10 @@ isEmpty(FK_FRAMEWORK_PATH){
 }
 
 !isEmpty(FK_FRAMEWORK_PATH){
-    FK_TOOLS_FOLDER = $$system_path($$FK_FRAMEWORK_PATH/tools)
     FK_UTILS_FOLDER = $$system_path($$FK_FRAMEWORK_PATH/utils)
 }else{
     error("Unable to reslove FK_FRAMEWORK_PATH")
 }
 
 export(FK_FRAMEWORK_PATH)
-export(FK_TOOLS_FOLDER)
 export(FK_UTILS_FOLDER)
