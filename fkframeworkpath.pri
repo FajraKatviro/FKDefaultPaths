@@ -1,17 +1,20 @@
 
 isEmpty(FK_FRAMEWORK_PATH){
 
+#todo: remove
     QMAKE_SPEC_T = $$[QMAKE_SPEC]
 
+#todo: change to QMAKE_HOST
     contains(QMAKE_SPEC_T,.*win32.*){
         FK_FRAMEWORK_PATH = $$system_path($$(APPDATA)/FKFramework)
     }
 
+#todo: change to QMAKE_HOST
     contains(QMAKE_SPEC_T,.*macx.*){
         FK_FRAMEWORK_PATH = $$system_path(/$$(HOME)/Applications/FKFramework)
     }
 
-    contains(QMAKE_SPEC_T,.*linux.*){
+    equals(QMAKE_HOST.os, Linux){
         FK_FRAMEWORK_PATH = $$system_path(/$$(HOME)/FKFramework)
     }
 
