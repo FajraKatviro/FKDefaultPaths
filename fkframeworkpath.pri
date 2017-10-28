@@ -9,8 +9,7 @@ isEmpty(FK_FRAMEWORK_PATH){
         FK_FRAMEWORK_PATH = $$system_path($$(APPDATA)/FKFramework)
     }
 
-#todo: change to QMAKE_HOST
-    contains(QMAKE_SPEC_T,.*macx.*){
+    equals(QMAKE_HOST.os, Darwin){
         FK_FRAMEWORK_PATH = $$system_path(/$$(HOME)/Applications/FKFramework)
     }
 
